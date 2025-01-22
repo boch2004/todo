@@ -35,7 +35,7 @@ export const todoSlice = createSlice({
             state.todolist.push(action.payload);
         },
         removeTask: (state, action) => {
-            state.todolist = state.todolist.filter((el) => el.id !== action.payload.id)
+            state.todolist = state.todolist.filter((el) => el.title !== action.payload.title)
         },
         doneTask: (state, action) => {
             let i = state.todolist.findIndex((el) => el.id === action.payload.id);
