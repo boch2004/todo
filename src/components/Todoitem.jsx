@@ -13,7 +13,7 @@ function Todoitem({todo}) {
       </div>
       <span onClick={()=> dispatch(doneTask({id:todo.id}))}  className='text-sm m-5' >{todo.isDone?"Done" : "Not Done"}</span>
       <EditTask id={todo.id} />
-      <button onClick={()=> dispatch(removeTask({id:todo.id}))} >X</button>
+      <button onClick={()=> dispatch(removeTask({title:todo.title}))} >X</button>
       </div>
       
   )
